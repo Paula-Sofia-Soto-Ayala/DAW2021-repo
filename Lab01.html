@@ -1,0 +1,603 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>preguntas</title>
+    <style>
+        h1{
+            letter-spacing: 0.2rem;
+            color: coral;
+        }
+
+        body{
+            border: 30px solid pink;
+            padding: 20px;
+            max-width: 900px;
+            width: 80%;
+            margin: 20px auto;
+        }
+
+        p:nth-of-type(1) {
+            font-size: 30px;
+        }
+
+        ul{
+            border-left: 10px solid pink;
+        }
+        
+        table {
+            border-collapse: collapse;
+            width: 100%;
+        }
+
+        td, th {
+            border: 1px solid #dddddd;
+            text-align: left;
+            padding: 8px;
+        }
+
+        tr:nth-child(even) {
+            background-color: pink;
+        }
+
+        textarea {
+            width: 400px;
+            height: 320px;
+            resize: none;
+        }
+
+        img {
+            width: 899px;
+            height: 500px;
+        }
+
+        #parag{
+            font-size: 20px;
+        }
+
+        #textarea-form {
+            width: 870px;
+            height: 600px;
+            resize: none;
+        }
+
+        #footer-p {
+            font-size: 15px;
+        }
+    </style>
+</head>
+<body>  
+    <h1>LABORATORIO 01</h1>
+    <h1>Pregunta 1</h1>
+    <hr>
+    <p>
+        ¿Cuál es la diferencia entre <strong>Internet</strong> y la <strong>World Wide Web</strong>?
+    </p>
+    <p>
+        Internet
+    </p>
+    <ul>
+        <li>Sistema de computadoras o dispositivos como cables, routers, teléfonos, etc. que forma una red mundial de comunicación
+        centralizada a través del protocolo TCP/IP y que permite intercambiar o consultar una variedad enorme de tipos de datos
+        como vídeos, imágenes, páginas web, textos y demás.</li>
+    </ul>
+    <p>
+        World Wide Web
+    </p>
+    <ul>
+        <li>Es un sistema que funciona a través de internet, utiliza el sistema de Localizador Uniforme de Recursos o URL, se pueden
+        enviar distintos tipos de datos a través del Protocolo de Transferencia de Hipertextos o HTTP, fue creado en HTML
+        (Hypertext Markup Language).</li>
+    </ul>
+    <hr>
+    <h1>Pregunta 2</h1>
+    <hr>
+    <p>
+        ¿Cuáles son las partes de un <strong>URL</strong>?
+    </p>
+    <p>
+        URL
+    </p>
+    <ul>
+        <li>URL (siglas del inglés: Uniform Resource Locator, es decir, Localizador Uniforme de Recursos).</li>
+    </ul>
+    <p>
+        Partes de URL
+    </p>
+    <ul>
+        <li>Protocolo de red
+            <ul>
+                <li>
+                    Http, Https, mailto y ftp son los principales protocolos web que encabezan una URL
+                </li>
+            </ul>
+        </li>
+        <br>
+        <li>Servicio
+            <ul>
+                <li>
+                    WWW, WWW2, etc.
+                </li>
+            </ul>
+        </li>
+        <br>
+        <li>Dominio
+            <ul>
+                <li>
+                    Comercial(.com), educativo(.edu), etc.
+                </li>
+            </ul>
+        </li>
+        <br>
+        <li>Ruta y nombre del archivo
+            <ul>
+                <li>
+                    Carpetas y directorios donde se ubica el recurso en el servidor.
+                </li>
+            </ul>
+        </li>
+    </ul>
+    <hr>
+    <h1>Pregunta 3</h1>
+    <hr>
+    <p>
+        ¿Cuál es el propósito de los métodos <strong>HTTP: GET, HEAD, POST, PUT, PATCH, DELETE</strong>?
+    </p>
+    <p>
+        GET
+    </p>
+    <ul>
+        <li>
+            Este método solicita una representación de un recurso específico, sólo recupera datos o información.
+        </li>
+    </ul>
+    <p>
+        HEAD
+    </p>
+    <ul>
+        <li>
+            Este método se utiliza para obtener información sobre un determinado recurso, como GET pero sin retornar el
+            registro.
+        </li>
+    </ul>
+    <p>
+        POST
+    </p>
+    <ul>
+        <li>
+            Sirve para entregar una entidad a un determinado recurso, frecuentemente cambiando el estado o efectos
+            secundarios en el
+            servidor.
+        </li>
+    </ul>
+    <p>
+        PUT
+    </p>
+    <ul>
+        <li>
+            Sirve para actualizar los datos a través de un servicio web REST.
+        </li>
+    </ul>
+    <p>
+        PATCH
+    </p>
+    <ul>
+        <li>
+            Sirve para aplicar modificaciones parciales a un recurso.
+        </li>
+    </ul>
+    <p>
+        DELETE
+    </p>
+    <ul>
+        <li>
+            Borrar un recurso específico.
+        </li>
+    </ul>
+    <hr>
+    <h1>Pregunta 4</h1>
+    <hr>
+    <p>
+        Métodos HTTP
+    </p>
+    <p>
+        ¿Qué método HTTP se debe utilizar al enviar un formulario HTML, por ejemplo cuando ingresas tu usuario y contraseña
+        en
+        algún sitio? ¿Por qué?
+    </p>
+    <ul>
+        <li>
+            POST, la razón es porque no regresan la información del formulario en la URL y eso lo hace más seguro.
+        </li>
+    </ul>
+    <p>
+        ¿Qué método HTTP se utiliza cuando a través de un navegador web se accede a una página a través de un URL?
+    </p>
+    <ul>
+        <li>
+            GET
+        </li>
+    </ul>
+    <hr>
+    <h1>Pregunta 5</h1>
+    <hr>
+    <p>
+        Códigos <strong>200</strong>,<strong> 400</strong> y <strong>500</strong>
+    </p>
+    <p>
+        Un servidor web devuelve una respuesta HTTP con código 200. ¿Qué significa esto? ¿Ocurrió algún error?
+    </p>
+    <ul>
+        <li>
+            Los códigos en 200 significan que todo <strong>se ha recibido, procesado y se ha regresado de manera
+                satisfactoria</strong>, el 200
+            específicamente significa que todo se ha procesado de forma correcta.
+        </li>
+    </ul>
+    <br>
+    <p>
+        ¿Es responsabilidad del desarrollador corregir un sitio web si un usuario reporta que intentó acceder al sitio y se
+        encontró con un error 404? ¿Por qué?
+    </p>
+    <ul>
+        <li>
+            Los 400 <strong>indican errores del cliente</strong>, el error más famoso es el 404 y significa que el recurso
+            no está disponible en el
+            servidor, quizá estuvo disponible en algún momento pero ha sido borrado o no se ha escrito la dirección de
+            manera
+            correcta.
+        </li>
+    </ul>
+    <br>
+    <p>
+        ¿Es responsabilidad del desarrollador corregir un sitio web si un usuario reporta que intentó acceder al sitio y se
+        encontró con un error 500? ¿Por qué?
+    </p>
+    <ul>
+        <li>
+            Los errores 500 se refieren a un <strong>error del servidor</strong> y el cliente no tiene forma de arreglarlo,
+            el error 500 es el
+            segundo error más famoso y se refiere a que hubo un error en el servidor y no especifica nada.
+        </li>
+    </ul>
+    <hr>
+    <h1>Pregunta 6</h1>
+    <hr>
+    <p>
+        HTML5
+    </p>
+    <p>
+        ¿Qué significa que un atributo HTML5 esté <strong>depreciado o desaprobado (deprecated)</strong>? Menciona algunos
+        elementos de HTML 4
+        que en HTML5 estén desaprobados.
+    </p>
+    <ul>
+        <li>
+            Los tags y atributos son desaprobados porque el estándar de HTML ya no los recomienda y sucede porque a veces
+            son
+            reemplazados y/o se vuelven obsoletos.
+            <p id="parag">
+                Ejemplos
+            </p>
+            <ul>
+                <li>
+                    <strong>applet</strong>: Reemplazado por el tag HTML object.
+                </li>
+                <li>
+                    <strong>dir</strong>: Reemplazado por el tag HTML ul.
+                </li>
+                <li>
+                    <strong>isindex</strong>: Reemplazado por el tag HTML input.
+                </li>
+                <li>
+                    <strong>menu</strong>: Reemplazado por el tag HTML ul.
+                </li>
+            </ul>
+        </li>
+    </ul>
+    <p>
+        ¿Qué tanto soporte HTML5 tiene el navegador que utilizas?
+    </p>
+    <ul>
+        <li>
+            Estoy usando Chrome Dev 92.0.4515.107 en macOS Catalina 10.15 y soporte es de 476/555
+        </li>
+    </ul>
+    <hr>
+    <h1>Pregunta 7</h1>
+    <hr>
+    <p>
+        ¿Cuáles son las <strong>diferencias principales</strong> entre HTML 4 y HTML5?
+    </p>
+    <table>
+        <thead>
+            <tr>
+                <th>HTML4</th>
+                <th>HTML5</th>
+            </tr>
+        </thead>
+        <tbody>
+            <tr>
+                <td>No soporta audio y video</td>
+                <td>Soporta audio y video(<audio>,<video>)</td>
+            </tr>
+            <tr>
+                <td>Usa cookies para almacenar data temporal</td>
+                <td>Usa SQL para almacenar data offline</td>
+            </tr>
+            <tr>
+                <td>No permite Javascript correr en el navegador</td>
+                <td>Deja que Javascript corra en el fondo y es posible por JS web API en HTML5</td>
+            </tr>
+            <tr>
+                <td>No puede manejar sintaxis no precisa</td>
+                <td>Puede manejar sintaxis no precisa</td>
+            </tr>
+            <tr>
+                <td>No es posible dibujar figuras como triángulos, círculos, rectángulos,etc.</td>
+                <td>Es posible dibujar figuras como triángulos, círculos, rectángulos,etc.</td>
+            </tr>
+        </tbody>
+    </table>
+    <hr>
+    <h1>Pregunta 8</h1>
+    <hr>
+    <p>
+        ¿Qué componentes de estructura y estilo tiene una tabla?
+    </p>
+    <table>
+        <thead>
+            <tr>
+                <th>Así se ve la estructura</th>
+                <th>Así se ve la tabla</th>
+            </tr>
+        </thead>
+        <tbody>
+            <tr>
+                <td>
+                    <textarea readonly>
+    <table border=”1”>
+        <caption>Es una tabla</caption>
+        <thead>
+            <tr>
+                <th>A</th>
+                <th>B</th>
+            </tr>
+        </thead>
+        <tbody>
+            <tr>
+                <th>1</th>
+                <td>2</td>
+            </tr>
+        </tbody>
+        <tfoot>
+            <tr>
+                <th>a</th>
+                <th>b</th>
+            </tr>
+        </tfoot>
+    </table>
+                            </textarea>
+                </td>
+                <td>
+                    <table border=”1”>
+                        <caption>Es una tabla</caption>
+                        <thead>
+                            <tr>
+                                <th>A</th>
+                                <th>B</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <tr>
+                                <td>1</td>
+                                <td>2</td>
+                            </tr>
+                        </tbody>
+                        <tfoot>
+                            <tr>
+                                <th>a</th>
+                                <th>b</th>
+                            </tr>
+                        </tfoot>
+                    </table>
+    
+                </td>
+            </tr>
+        </tbody>
+    </table>
+    <p>
+        También hay tags como < col>,< colspan>,< colgroup>
+    </p>
+    <hr>
+    <h1>Pregunta 9</h1>
+    <hr>
+    <p>
+        ¿Cuáles son los principales controles de una <strong>forma</strong> HTML5?
+    </p>
+    <ul>
+        <li>
+            < form>, < label>, < input>
+        </li>
+    </ul>
+    <table>
+        <thead>
+            <tr>
+                <th>Así se ve la estructura de una forma</th>
+            </tr>
+        </thead>
+        <tbody>
+            <tr>
+                <td>
+    <textarea readonly id="textarea-form">
+    <form method="GET">
+        <div>
+            <label for="primerNombre">Primer Nombre:</label>
+            <input name="primernombre" id="primerNombre" type="text" placeholder="Sofía" required>
+    
+            <label for="Apellido">Apellido:</label>
+            <input name="apellido" id="Apellido" type="text" placeholder="Soto" required>
+        </div>
+    
+        <div>
+            <label for="Hombre">Hombre:</label>
+            <input name="genero" id="Hombre" type="radio" value="hombre">
+    
+            <label for="Mujer">Mujer:</label>
+            <input name="genero" id="Mujer" type="radio" value="mujer">
+    
+            <label for="Otro">Otro:</label>
+            <input name="genero" id="Otro" type="radio" value="otro">
+        </div>
+    
+        <div>
+            <label for="Email">Email:</label>
+            <input name="email" id="Email" type="email" placeholder="Tu email" required>
+    
+            <label>Contraseña:</label>
+            <input name="contraseña" type="password" placeholder="tu contraseña" pattern=".{5,10}" required
+                title="5 a 10 caracteres">
+        </div>
+    
+        <div>
+            <label>Edad</label>
+            <select name="edad">
+                <option>Month</option>
+                <option value="<18">Menos de 18</option>
+                <option value="18-50">Entre 18 y 50</option>
+                <option value=">50">Más de 50</option>
+            </select>
+        </div>
+    
+        <div>
+            <label for="Agreed">Acepto los términos y condiciones</label>
+            <input name="Agreed" type="checkbox" id="Agreed" value="true" required>
+        </div>
+        <button>submit</button>
+    </form>
+    </textarea>
+                </td>
+            </tr>
+        </tbody>
+    </table>
+    <br>
+    <h4>Registro</h4>
+    <form>
+        <div>
+            <label for="primerNombre">Primer Nombre:</label>
+            <input name="primernombre" id="primerNombre" type="text" placeholder="Sofía" required>
+    
+            <label for="Apellido">Apellido:</label>
+            <input name="apellido" id="Apellido" type="text" placeholder="Soto" required>
+        </div>
+    
+        <div>
+            <label for="Hombre">Hombre:</label>
+            <input name="genero" id="Hombre" type="radio" value="hombre">
+    
+            <label for="Mujer">Mujer:</label>
+            <input name="genero" id="Mujer" type="radio" value="mujer">
+    
+            <label for="Otro">Otro:</label>
+            <input name="genero" id="Otro" type="radio" value="otro">
+        </div>
+    
+        <div>
+            <label for="Email">Email:</label>
+            <input name="email" id="Email" type="email" placeholder="Tu email" required>
+    
+            <label>Contraseña:</label>
+            <input name="contraseña" type="password" placeholder="tu contraseña" pattern=".{5,10}" required
+                title="5 a 10 caracteres">
+        </div>
+    
+        <div>
+            <label>Edad</label>
+            <select name="edad">
+                <option>Edad</option>
+                <option value="<18">Menos de 18</option>
+                <option value="18-50">Entre 18 y 50</option>
+                <option value=">50">Más de 50</option>
+            </select>
+        </div>
+    
+        <div>
+            <label for="Agreed">Acepto los términos y condiciones</label>
+            <input name="Agreed" type="checkbox" id="Agreed" value="true" required>
+        </div>
+        <button>submit</button>
+    </form>
+    <hr>
+    <h1>Pregunta 10</h1>
+    <hr>
+    <p>
+        Sistemas de información
+    </p>
+    <p>
+        ¿Cuál es el ciclo de vida de los sistemas de información?
+    </p>
+    <ol>
+        <li>Planificación del concepto</li>
+        <li>Definición de requisitos</li>
+        <li>Diseño</li>
+        <li>Fase de desarrollo y pruebas</li>
+        <li>Puesta en marcha/Ejecución</li>
+        <li>Operaciones y mantenimiento</li>
+        <li>Disposición</li>
+    </ol>
+    <br>
+    <img src="https://www.viewnext.com//wp-content/uploads/2018/06/7fases_SDLC_infografia.jpg" alt="">
+    <hr>
+    <h1>Referencias</h1>
+    <ol>
+        <li>
+            D. (2020, 27 febrero). Diferencia entre internet y web. Diferenciador.
+            <a
+                href="https://www.diferenciador.com/diferencia-entre-internet-y-web/">https://www.diferenciador.com/diferencia-entre-internet-y-web/</a>
+        </li>
+        <br>
+        <li>
+            Equipo editorial, Etecé. (2021, 6 agosto). URL - Concepto, usos, partes y características. Concepto.
+            <a href="https://concepto.de/url/">https://concepto.de/url/</a>
+        </li>
+        <br>
+        <li>
+            MDN Web Docs. (2021, 15 julio). HTTP request methods - HTTP | MDN.
+            <a
+                href="https://developer.mozilla.org/en-US/docs/Web/HTTP/Methods">https://developer.mozilla.org/en-US/docs/Web/HTTP/Methods</a>
+        </li>
+        <br>
+        <li>
+            Ramírez, I. (2018, 12 mayo). Errores 404, 500, 502, 504 y más en páginas web, ¿qué significan? Xataka.
+            <a
+                href="https://www.xataka.com/basics/errores-404-500-502-504-y-mas-en-paginas-web-que-significan">https://www.xataka.com/basics/errores-404-500-502-504-y-mas-en-paginas-web-que-significan</a>
+        </li>
+        <br>
+        <li>
+            W3docs. (2020, 15 junio). Deprecated HTML Tags. <a
+                href="https://www.w3docs.com/learn-html/deprecated-html-tags.html">https://www.w3docs.com/learn-html/deprecated-html-tags.html</a>
+        </li>
+        <br>
+        <li>
+            GeeksforGeeks. (2021, 29 julio). Difference between HTML and HTML5.
+            <a
+                href="https://www.geeksforgeeks.org/difference-between-html-and-html5/">https://www.geeksforgeeks.org/difference-between-html-and-html5/</a>
+        </li>
+    </ol>
+    <br>
+    <footer>
+        <p id="footer-p">
+            Editor de texto: <a href="https://code.visualstudio.com/download">Visual Studio Code</a>
+            <br>
+            Nombre:Sofía Soto
+            <br>
+            Matrícula:A01620155
+            <br>
+            Correo:A01620155@itesm.mx/paulasofiasotoayala@gmail.com
+        </p>
+    </footer>
+</body>
+
+</html>

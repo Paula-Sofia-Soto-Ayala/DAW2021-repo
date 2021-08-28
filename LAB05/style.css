@@ -1,0 +1,87 @@
+body {
+    background: rgb(238, 238, 238);
+}
+
+body * {
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+}
+
+tr {
+    text-align: left;
+}
+
+td {
+    padding: 10px;
+}
+
+.header {
+    height: 10vh;
+    width: 100%;
+    background: lightpink;
+    display: inline-flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.header > span {
+    font-size: xx-large;
+    text-align: center;
+}
+
+.container {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+.labs {
+    width: 75vw;
+    background: lightpink;
+    border-radius: 6px;
+
+    display: flex;
+    flex-direction: column;
+}
+
+.lab {
+    background: whitesmoke;
+    margin: 10px;
+    padding: 10px;
+    border-radius: 6px;
+
+    display: inline-flex;
+    flex-direction: row;
+    align-items: flex-start;
+}
+
+.contenedorTabla {
+    display: flex;
+    flex-direction: column;
+}
+
+.centrar {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.lab-title {
+    flex-basis: 100%;
+    font-weight: bold;
+}
+
+.ejercicios {
+    width: 60vw;
+    border-radius: 6px;
+    padding: 10px;
+    text-align: center;
+}
+
+.my-btn {
+    width: 120px;
+    height: 60px;
+    border-radius: 6px;
+    margin: 5px;
+    font-size: medium;
+}

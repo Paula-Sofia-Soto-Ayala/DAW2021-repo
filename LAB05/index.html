@@ -1,0 +1,185 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
+    <!-- <script src="https://cdn.jsdelivr.net/npm/vue@2"></script> -->
+    <script src="https://cdn.jsdelivr.net/npm/vue@2/dist/vue.js"></script>
+    <title>Lab 5 - Paula Sofía Soto Ayala</title>
+</head>
+
+<body>
+    <div class="header">
+        <span>Laboratorio 5</span>
+    </div>
+    <div class="container">
+        <div class="ejercicios">
+            <h2>Ejercicios</h2>
+        </div>
+        <div class="labs" id="app">
+            <div class="contenedorTabla">
+                <div class="lab">
+                    <div class="lab-title">1. Generar Tabla</div>
+                    <button v-on:click="generarTabla()" class="my-btn">Generar</button>
+                    <button v-on:click="borrarTabla()" class="my-btn">Borrar</button>
+                </div>
+
+                <div class="centrar" v-show="mostrarTabla">
+                    <table class="tabla">
+                        <th>Número</th>
+                        <th>Cuadrado</th>
+                        <th>Cubo</th>
+                        <tr v-for="item in secuencia">
+                            <td>{{item.num}}</td>
+                            <td>{{item.square}}</td>
+                            <td>{{item.cube}}</td>
+                        </tr>
+                    </table>
+                </div>
+            </div>
+            <div class="lab">
+                <div class="lab-title">2. Suma Prompt</div>
+                <button onclick="suma()" class="my-btn">Suma</button>
+            </div>
+            <div class="lab">
+                <div class="lab-title">3. Contador</div>
+                <button onclick="contador(randomArray())" class="my-btn">Contador Random</button>
+            </div>
+            <div class="contenedorTabla">
+                <div class="lab">
+                    <div class="lab-title">4. Promedios</div>
+                    <button v-on:click="promediosMatriz()" class="my-btn">Promedios Matriz</button>
+                    <button v-on:click="borrarPromedios()" class="my-btn">Borrar Matriz</button>
+                </div>
+
+                <div class="centrar" v-show="mostrarPromedios">
+                    <table class="tabla">
+                        <th>Valores</th>
+                        <th>Promedio</th>
+                        <tr v-for="promedio in promedios">
+                            <td>{{promedio.calificaciones}}</td>
+                            <td>{{promedio.promedio}}</td>
+                        </tr>
+                    </table>
+                </div>
+            </div>
+            <div class="lab">
+                <div class="lab-title">5. Invertir Número</div>
+                <button onclick="inverso()" class="my-btn">Invertir Número</button>
+            </div>
+            <div class="lab">
+                <div class="lab-title">6. Two Sum</div>
+                <button onclick="twoSum()" class="my-btn">Two Sum</button>
+            </div>
+            <div class="lab">
+                <div class="lab-title">7. Preguntas</div>
+                <ol>
+                    <li>¿Qué diferencias y semejanzas hay entre Java y JavaScript?
+                        <ul>
+                            <li>
+                                Semejanzas: las primeras cuatro letras. ambos soportan programacion orientada a objetos y tienen sintaxis basada en C.
+                            </li>
+                            <li>
+                                Diferencias: JS es un lenguaje de scripting con tipos dinámicos y Java es un lenguaje estrictamente tipado y estático.
+                            </li>
+                        </ul>
+                    </li>
+                    <br>
+                    <li>¿Qué métodos tiene el objeto Date? (Menciona al menos 5*)
+                        <ul>
+                            <li>
+                                now()
+                            </li>
+                            <li>
+                                parse()
+                            </li>
+                            <li>
+                                getYear()
+                            </li>
+                            <li>
+                                setTime()
+                            </li>
+                            <li>
+                                UTC()
+                            </li>
+                        </ul>
+                    </li>
+                    <br>
+                    <li>¿Qué métodos tienen los arreglos? (Menciona al menos 5*)
+                        <ul>
+                            <li>
+                                join()
+                            </li>
+                            <li>
+                                splice()
+                            </li>
+                            <li>
+                                push()
+                            </li>
+                            <li>
+                                indexOf()
+                            </li>
+                            <li>
+                                replace()
+                            </li>
+                        </ul>
+                    </li>
+                    <br>
+                    <li>¿Cómo se declara una variable con alcance local dentro de una función?
+                        <ul>
+                            <li>
+                                Funcionan por bloques "{}"
+                            </li>
+                            <li>
+                                let variable1 = 5;
+                            </li>
+                            <li>
+                                const variable1 = 10;
+                            </li>
+                        </ul>
+                    </li>
+                    <br>
+                    <li>¿Qué implicaciones tiene utilizar variables globales dentro de funciones?
+                        <ul>
+                            <li>
+                                var se utliza como variable global.
+                            </li>
+                            <li>
+                                Puede crear discrepancias en el código ya que no funciona por bloques.
+                            </li>
+                        </ul>
+                    </li>
+                    <br>
+                    <li>¿Qué método de String se puede utilizar para buscar patrones con expresiones regulares?¿Para qué
+                        podrías utilizar esto
+                        en una aplicación web?
+                        <ul>
+                            <li>
+                                match()
+                            </li>
+                            <li>
+                                matchAll()
+                            </li>
+                            <li>
+                                replace()
+                            </li>
+                            <li>
+                                search()
+                            </li>
+                            <li>
+                                split()
+                            </li>
+                        </ul>
+                    </li>
+                    <br>
+                </ol>
+            </div>
+        </div>
+    </div>
+    <script src="index.js"></script>
+</body>
+
+</html>

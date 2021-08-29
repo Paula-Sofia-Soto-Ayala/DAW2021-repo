@@ -97,6 +97,9 @@ function randomArray(max = 10, onlyPositive = false) {
     return array;
 }
 
+/**
+ * Funcion auxiliar que genera una matriz random con numeros del 0 al 100
+ */
 function randomMatrix() {
     const count = 5;
     const matrix = []
@@ -109,9 +112,11 @@ function randomMatrix() {
     return matrix;
 }
 
-//Dado un arreglo numérico, retorna dos números que sumen el entero target
+/**
+ * Dado un arreglo numérico, retorna dos números que sumen el entero target
+ */
 function twoSum() {
-    const target = parseInt(prompt("Ingresa el target"))
+    const target = parseInt(prompt("Dado un arreglo numérico, retorna dos números que sumen el entero target.\nIngresa el target"))
     const array = randomArray(target + 5, true);
 
     const dic = new Map();

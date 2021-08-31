@@ -1,0 +1,130 @@
+body {
+    font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+    color: #282828;
+    margin: 0px;
+}
+
+.nav-bar {
+    background: linear-gradient(#e04ebc, #d494ca);
+    font-size: 36px;
+    height: 80px;
+    margin-bottom: 15px;
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.footer {
+    position: relative;
+    bottom: -60px;
+    margin: 0px;
+}
+
+.title {
+    padding-top: 10px;
+    align-self: center;
+    font-size: 36px;
+    font-weight: 500px;
+    position: relative;
+    top: -30px;
+}
+
+.product {
+    display: flex;
+    justify-content: center;
+    align-items: flex-end;
+}
+
+img {
+    height: 70%;
+    width: 90%;
+    border-radius: 6px;
+    box-shadow: 3px 3px 4px #d494ca
+}
+
+.product-image {
+    flex-basis: 700px;
+}
+
+.product-info {
+    margin-top: 10px;
+    flex-basis: 400px;
+}
+
+.color-box {
+    width: 40px;
+    height: 40px;
+    margin-top: 5px;
+    border-radius: 50%;
+
+    align-self: flex-end;
+    display: inline-flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.container {
+    padding: 20px;
+    display: flex;
+    justify-content: space-evenly;
+}
+
+.cart {
+    margin-right: 25px;
+    border: 1px solid #d8d8d8;
+    padding: 5px 20px;
+
+    border-radius: 6px;
+    font-weight: 500;
+}
+
+button {
+    margin-top: 30px;
+    border: none;
+    background-color: #1E95EA;
+    border-radius: 6px;
+    box-shadow: 3px 3px 4px lightgrey;
+    color: white;
+    height: 40px;
+    width: 100px;
+    font-size: 14px;
+} 
+
+.disabledButton {
+    background-color: #d8d8d8;
+}
+
+.review-form {
+    width: 30%;
+    padding: 20px;
+    border: 1px solid #d8d8d8;  
+}
+
+input {
+    width: 100%;  
+    height: 25px;
+    margin-bottom: 20px;
+}
+
+textarea {
+    width: 100%;
+    height: 60px;
+}
+
+.outOfStock {
+  text-decoration: line-through;
+}
+
+.app-container {
+    width: 100vw;
+    height: 80vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+input[type=submit] {
+    font-size: 16px;
+    font-weight: 500;
+}

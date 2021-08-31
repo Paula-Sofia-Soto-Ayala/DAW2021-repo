@@ -1,0 +1,15 @@
+1. ¿Por qué es una buena práctica usar JavaScript para checar que sean válidos 
+los inputs de las formas antes de enviar los datos al servidor?
+
+- Se denomina validación de formulario en el lado del cliente y ayuda a garantizar que los 
+datos que se envían coinciden con los requisitos establecidos en los diversos controles de formulario.
+
+2. ¿Cómo puedes saltarte la seguridad de validaciones hechas con JavaScript?
+
+- Usando validaciones integradas al HTML como: min, max, pattern, required, type.
+
+3. Si te puedes saltar la seguridad de las validaciones de JavaScript, 
+entonces ¿por qué la primera pregunta dice que es una buena práctica?
+
+- Para que no tenga dificultades con los navegadores que 
+no soportan la validación integrada a HTML5

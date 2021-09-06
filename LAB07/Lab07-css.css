@@ -1,0 +1,96 @@
+body {
+    background: rgb(238, 238, 238);
+}
+
+body * {
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+}
+
+tr {
+    text-align: left;
+}
+
+td {
+    padding: 10px;
+}
+
+.header {
+    position:sticky;
+    height: 10vh;
+    width: 100%;
+    background: lightpink;
+    display: inline-flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.header > span {
+    font-size: xx-large;
+    text-align: center;
+}
+
+.container {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+.labs {
+    width: 85vw;
+    border-radius: 6px;
+
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: space-between;
+}
+
+.lab {
+    background: whitesmoke;
+    margin: 10px;
+    padding: 10px;
+    border-radius: 6px;
+
+    display: inline-flex;
+    flex-direction: column;
+    align-items: flex-start;
+}
+
+.lab img {
+    aspect-ratio: 16 / 10;
+}
+
+.lab .card-body {
+    display: flex;
+    flex-direction: column;
+    width: calc(360px - 1rem);
+}
+
+.contenedorTabla {
+    display: flex;
+    flex-direction: row;
+}
+
+.centrar {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.lab-title {
+    flex-basis: 100%;
+    font-weight: bold;
+}
+
+.ejercicios {
+    width: 60vw;
+    border-radius: 6px;
+    padding: 10px;
+    text-align: center;
+}
+
+.my-btn {
+    margin: 5px;
+    margin-top: auto;
+}

@@ -6,12 +6,20 @@ body * {
     font-family: Verdana, Geneva, Tahoma, sans-serif;
 }
 
+table {
+    margin: 10px !important;
+}
+
 tr {
     text-align: left;
 }
 
 td {
     padding: 10px;
+}
+
+li {
+    overflow-wrap: break-word;
 }
 
 .header {
@@ -37,27 +45,22 @@ td {
 }
 
 .labs {
-    width: 85vw;
-    border-radius: 6px;
-
+    width: 100vw;
     display: flex;
     flex-direction: row;
+    justify-content: space-evenly;
     flex-wrap: wrap;
-    justify-content: space-between;
 }
 
 .lab {
     background: whitesmoke;
-    margin: 10px;
     padding: 10px;
-    border-radius: 6px;
-
-    display: inline-flex;
-    flex-direction: column;
-    align-items: flex-start;
+    margin-bottom: 3%;
+    border-radius: 6px !important;
 }
 
 .lab img {
+    width: 320px;
     aspect-ratio: 16 / 10;
 }
 
@@ -67,30 +70,29 @@ td {
     width: calc(360px - 1rem);
 }
 
-.contenedorTabla {
-    display: flex;
-    flex-direction: row;
-}
-
 .centrar {
     display: flex;
     align-items: center;
     justify-content: center;
 }
 
-.lab-title {
-    flex-basis: 100%;
-    font-weight: bold;
-}
-
-.ejercicios {
-    width: 60vw;
-    border-radius: 6px;
-    padding: 10px;
-    text-align: center;
-}
-
 .my-btn {
     margin: 5px;
     margin-top: auto;
+}
+
+.questions {
+    width: 85vw;
+    display: flex;
+    flex-direction: column;
+
+    align-items: flex-start;
+}
+
+.questions .card {
+    width: 85vw;
+}
+
+.questions .btn {
+    text-align: left !important;
 }

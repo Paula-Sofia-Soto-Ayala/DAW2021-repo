@@ -1,5 +1,5 @@
 import Vue from "vue";
-import VueRouter from "../../../../../LAB_12/client/node_modules/vue-router/types";
+import VueRouter from "vue-router";
 //import Home from "../views/Home.vue";
 
 Vue.use(VueRouter);

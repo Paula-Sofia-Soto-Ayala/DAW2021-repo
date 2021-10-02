@@ -1,43 +1,28 @@
 const express = require("express");
 const path = require('path');
+const cors = require("cors");
 const fs = require("fs");
 
 const port = 8080;
 
+var corsOptions = {
+    origin: '*'
+}
+
 const app = express();
+
 app.use(express.json());
-app.use(express.static(__dirname));
+app.use(cors(corsOptions));
+app.use(express.static(__dirname + "/public"));
 
 app.listen(port, () => console.log(`Server running on port ${port}`));
-app.get("/instructions", (req, res) => {
-    res.status(200).send({
-        instructions: "Receives two numbers and adds them",
-        params: "Number 1 is a, number 2 is b"
-    })
-})
 
-app.get("/sum", (req, res) => {
-    const { a, b } = req.query;
-    const numA = parseInt(a)
-    const numB = parseInt(b);
-
-    if (isNaN(numA) || isNaN(numB)) {
-        res.status(400).send({
-            error: "One of the numbers was invalid"
-        })
-    }
-
-    res.status(200).send({
-        a: numA,
-        b: numB,
-        sum: numA + numB
-    });
-})
-
-app.get("/form", (req, res) => {
-    const file = path.join(__dirname, "Lab10-form.html");
+app.get("/", (req, res) => {
+    const file = path.join(__dirname, "./public/index.html");
     res.status(200).sendFile(file);
 })
+
+app.get("/test", (req, res) => res.status(200).json({ message: "Hello!" }))
 
 app.post("/form", (req, res) => {
     const { transaction } = req.body;
@@ -53,7 +38,7 @@ app.post("/form", (req, res) => {
                     error: err.message,
                     data: transaction
                 })
-                
+
                 const filepath = path.join(__dirname, "submits");
                 console.log(`Could not write to filepath ${filepath}`);
                 console.log(`Error: ${err.message}`);
@@ -81,6 +66,6 @@ app.get("*", (req, res) => {
             error: "Route does not exist"
         })
     } else {
-        res.status(404).sendFile(path.join(__dirname, "Lab10-404.html"));
+        res.status(404).sendFile(path.join(__dirname, "404.html"));
     }
 })

@@ -22,9 +22,13 @@ app.get("/", (req, res) => {
     res.status(200).sendFile(file);
 })
 
-app.get("/test", (req, res) => res.status(200).json({ message: "Hello!" }))
+app.get("/test", (req, res) => res.status(200).json({ message: "Hola" }))
 
-app.get("/lab12", (req, res) => res.status(200))
+/* app.get("/lab12", (req, res) => res.status(200))
+
+app.get("/lab14", (req, res) => res.status(200))
+
+app.get("/lab15", (req, res) => res.status(200)) */
 
 app.post("/forma", (req, res) => {
     const { transaction } = req.body;

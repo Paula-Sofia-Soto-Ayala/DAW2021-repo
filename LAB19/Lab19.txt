@@ -1,0 +1,97 @@
+/*SELECT SUM(cantidad) as "Cantidad total", SUM(precio*impuesto) as "Importe total"
+FROM entregan E, materiales M
+WHERE E.clave = M.clave 
+AND E.fecha >= '1997-01-01' AND E.fecha <= '1997-12-31'
+ORDER BY SUM(cantidad) DESC*/
+
+/*SELECT RazonSocial, SUM(cantidad) as "Cantidad total", SUM(precio*impuesto) as "Importe total"
+FROM entregan E, materiales M, proveedores P
+WHERE E.clave = M.clave AND E.rfc = P.rfc
+GROUP BY RazonSocial
+ORDER BY SUM(cantidad) DESC*/
+
+/*SELECT M.clave, descripcion, SUM(cantidad) as "Cantidad total", MIN(cantidad) as "Entrega minima", MAX(cantidad) as "Entrega maxima", SUM(precio*impuesto) as "Importe total"
+FROM entregan E, materiales M
+WHERE E.clave = M.clave
+GROUP BY M.clave, descripcion
+HAVING AVG(cantidad) > 400
+ORDER BY SUM(cantidad)*/
+
+/*SELECT RazonSocial, M.clave, descripcion, AVG (cantidad) as "Cantidad promedio"
+FROM proveedores P, materiales M, entregan E
+WHERE P.rfc = E.rfc AND E.clave AND M.clave
+GROUP BY RazonSocial, clave, descripcion
+HAVING AVG(cantidad) >= 500
+ORDER BY AVG(cantidad) DESC*/
+
+/*SELECT RazonSocial, M.clave, descripcion, AVG (cantidad)
+FROM proveedores P, materiales M, entregan E
+WHERE P.rfc = E.rfc AND E.clave AND M.clave
+GROUP BY RazonSocial, clave, descripcion
+HAVING AVG(cantidad) < 370 OR AVG(cantidad) > 450
+ORDER BY AVG(cantidad) DESC*/
+
+INSERT INTO `materiales` (`clave`, `descripcion`, `precio`, `impuesto`) VALUES ('2001', 'cemento', '100', '10');
+
+INSERT INTO `materiales` (`clave`, `descripcion`, `precio`, `impuesto`) VALUES ('2002', 'alambre cobre', '150', '15');
+
+INSERT INTO `materiales` (`clave`, `descripcion`, `precio`, `impuesto`) VALUES ('2003', 'hierro', '2500', '250');
+
+INSERT INTO `materiales` (`clave`, `descripcion`, `precio`, `impuesto`) VALUES ('2004', 'maruchan', '20', '2');
+
+INSERT INTO `materiales` (`clave`, `descripcion`, `precio`, `impuesto`) VALUES ('2005', 'plastico', '430', '43');
+
+/*SELECT clave,descripcion
+FROM materiales
+
+EXCEPT
+
+(SELECT DISTINCT M.clave,descripcion
+FROM materiales M, entregan E
+WHERE M.clave = E.clave)*/
+
+/*SELECT RazonSocial
+From entregan E, proyectos P, proveedores Pr
+WHERE E.numero = P.numero AND E.rfc = Pr.rfc IN (
+    SELECT numero
+    From proyectos
+    WHERE denominacion = 'Vamos México')
+    
+UNION
+
+SELECT RazonSocial
+From entregan E, proyectos P, proveedores Pr
+WHERE E.numero = P.numero AND E.rfc = Pr.rfc IN (
+    SELECT numero
+    From proyectos
+    WHERE denominacion = 'Queretaro Limpio')*/
+
+
+/*SELECT descripcion
+FROM materiales M
+WHERE NOT EXISTS
+(SELECT E.clave
+FROM entregan E, proyectos P
+WHERE E.numero = P.numero and E.clave = M.clave
+AND denominacion = 'CIT Yucatán')*/
+
+/*SELECT razonsocial, AVG(cantidad) as Cantidad
+FROM entregan E, proveedores P
+WHERE E.rfc = P.rfc
+HAVING AVG(cantidad) > (
+	SELECT AVG(cantidad)
+	FROM entregan E, proveedores P
+	WHERE E.rfc = P.rfc
+	AND P.rfc = 'VAGO780901')*/
+
+
+/*SELECT PR.rfc, razonsocial
+FROM proyectos P, proveedores PR, entregan E
+WHERE PR.rfc = E.rfc AND P.numero = E.numero
+AND denominacion = 'Infonavit Durango'
+GROUP BY PR.rfc, razonsocial 
+HAVING (SELECT SUM(cantidad) 
+        FROM proyectos P, proveedores PR, entregan E 
+        WHERE PR.rfc=E.rfc AND P.numero = E.numero AND fecha LIKE '%2000%') <(SELECT SUM(cantidad) 
+                                                                              FROM proyectos P, proveedores PR, entregan E 
+                                                                              WHERE PR.rfc=E.rfc AND P.numero = E.numero AND fecha LIKE '%2001%')*/
